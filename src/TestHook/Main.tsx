@@ -14,9 +14,9 @@ function App() {
   return (
     <>
       <div className="p-7">
-        <button className={`border-[#333] border-[1px] rounded px-2 mr-3 ${tabChange == 'transition'? activeClass : ''}`} onClick={()=>handleTabChange("transition")}>Use Transition</button>
-        <button className={`border-[#333] border-[1px] rounded px-2 mr-3 ${tabChange == 'memo'? activeClass : ''}`} onClick={()=>handleTabChange("memo")}>Use Memo</button>
-        <button className={`border-[#333] border-[1px] rounded px-2 ${tabChange == 'callback'? activeClass : ''}`} onClick={()=>handleTabChange("callback")}>Use Callback</button>
+        <button className={`border-[1px] rounded px-2 mr-3 ${tabChange == 'transition'? activeClass : 'border-[#333]'}`} onClick={()=>handleTabChange("transition")}>Use Transition</button>
+        <button className={`border-[1px] rounded px-2 mr-3 ${tabChange == 'memo'? activeClass : 'border-[#333]'}`} onClick={()=>handleTabChange("memo")}>Use Memo</button>
+        <button className={`border-[1px] rounded px-2 ${tabChange == 'callback'? activeClass : 'border-[#333]'}`} onClick={()=>handleTabChange("callback")}>Use Callback</button>
       </div>
       {
         tabChange === "transition" && <SampleMultiply />
